@@ -11,11 +11,10 @@ install:
 
 # Scripts to be run such as tests
 before_script:
-  - echo "no tests"
+  - docker pull node
 
 script:
   - docker --version # print the version for logging
-  - docker pull 
   - docker build -t simple-node .
   - docker tag simple-node mauriciotomazz/simple-node:latest
 
